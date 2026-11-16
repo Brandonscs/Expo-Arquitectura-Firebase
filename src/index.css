@@ -1,0 +1,77 @@
+:root {
+  /* Paleta Principal: Zapote, Dorado/Amarillo, Rojo y Blanco */
+  --color-zapote: #ff6b00;
+  --color-zapote-dark: #d95300;
+  --color-zapote-light: #ff8833;
+  
+  --color-dorado: #ffc107;
+  --color-dorado-light: #ffdb4d;
+  
+  --color-rojo: #e63946;
+  --color-rojo-dark: #b81d2a;
+
+  --color-blanco: #ffffff;
+  --color-blanco-soft: #f8f9fa;
+
+  /* Fondos y bordes oscuros para contraste elegante */
+  --bg-principal: #0d0f12;
+  --bg-tarjeta: #161a22;
+  --bg-tarjeta-hover: #1f2430;
+  --borde-color: rgba(255, 107, 0, 0.2);
+
+  /* Textos */
+  --texto-principal: #ffffff;
+  --texto-claro: #f0f0f0;
+  --texto-secundario: #a0a5b5;
+
+  /* Gradiantes listos para usar */
+  --gradiente-fuego: linear-gradient(135deg, var(--color-rojo) 0%, var(--color-zapote) 50%, var(--color-dorado) 100%);
+  --gradiente-dorado: linear-gradient(135deg, var(--color-zapote) 0%, var(--color-dorado) 100%);
+  --gradiente-falso-negro: linear-gradient(180deg, #161a22 0%, #0d0f12 100%);
+}
+
+/* Restablecimiento básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Clases de utilidad para reusar en componentes */
+.texto-gradiente {
+  background: var(--gradiente-fuego);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradiente-fuego {
+  background: var(--gradiente-fuego);
+}
+
+.bg-gradiente-dorado {
+  background: var(--gradiente-dorado);
+}
+
+.tarjeta-estilo {
+  background-color: var(--bg-tarjeta);
+  border: 1px solid var(--borde-color);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.tarjeta-estilo:hover {
+  background-color: var(--bg-tarjeta-hover);
+  border-color: var(--color-zapote);
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.15);
+}

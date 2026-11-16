@@ -1,0 +1,144 @@
+.costos-contenedor {
+  min-height: 100vh;
+  padding: 40px 24px 100px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.costos-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.costos-grid-secciones {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 900px) {
+  .costos-grid-secciones {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tarjeta-costo-bloque {
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde-color);
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.tarjeta-costo-bloque:hover {
+  border-color: var(--color-zapote);
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.15);
+}
+
+.costo-bloque-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 16px;
+}
+
+.costo-bloque-titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-blanco);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-plan {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.badge-plan.spark {
+  background: rgba(255, 193, 7, 0.15);
+  color: var(--color-dorado);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.badge-plan.blaze {
+  background: rgba(230, 57, 70, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(230, 57, 70, 0.3);
+}
+
+/* Subsecciones de planes */
+.plan-subseccion {
+  background: rgba(10, 12, 15, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.plan-subseccion-tit {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-zapote-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lista-puntos-costos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--texto-secundario);
+}
+
+.lista-puntos-costos li {
+  line-height: 1.4;
+}
+
+.lista-puntos-costos strong {
+  color: var(--color-blanco-soft);
+}
+
+/* Grid de Servicios Google Cloud */
+.cloud-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.cloud-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+}
+
+.cloud-item-name {
+  font-weight: 700;
+  color: #c084fc;
+  margin-bottom: 2px;
+}
+
+.cloud-item-desc {
+  color: var(--texto-secundario);
+}

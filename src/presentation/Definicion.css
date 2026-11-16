@@ -1,0 +1,182 @@
+.definicion-contenedor {
+  min-height: 100vh;
+  padding: 40px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.definicion-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.tag-seccion {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-dorado);
+  background: rgba(255, 193, 7, 0.08);
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.definicion-titulo {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--color-blanco);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.definicion-subtitulo {
+  font-size: 1.1rem;
+  color: var(--texto-secundario);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid de Tarjetas Comparativas */
+.definicion-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .definicion-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tarjeta-def {
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde-color);
+  border-radius: 18px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tarjeta-def::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.tarjeta-def.hosting::before {
+  background: linear-gradient(90deg, #3b82f6, var(--color-zapote));
+}
+
+.tarjeta-def.app-hosting::before {
+  background: linear-gradient(90deg, #a855f7, var(--color-rojo));
+}
+
+.tarjeta-def:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-zapote);
+  box-shadow: 0 12px 35px rgba(255, 107, 0, 0.15);
+}
+
+.tarjeta-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.icono-wrapper {
+  padding: 14px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-wrapper.hosting {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
+}
+
+.icono-wrapper.app-hosting {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  color: #c084fc;
+}
+
+.badge-tipo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-tipo.frontend {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.badge-tipo.backend {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.tarjeta-def-titulo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-blanco);
+  margin-bottom: 12px;
+}
+
+.tarjeta-def-desc {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Lista de características clave */
+.lista-caracteristicas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+.item-caracteristica {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--color-blanco-soft);
+}
+
+.icono-check {
+  color: var(--color-dorado);
+  flex-shrink: 0;
+  margin-top: 2px;
+}

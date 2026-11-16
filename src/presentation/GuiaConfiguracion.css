@@ -1,0 +1,166 @@
+.guia-contenedor {
+  min-height: 100vh;
+  padding: 40px 24px 100px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.guia-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Selector de Métodos */
+.selector-metodos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.btn-metodo {
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde-color);
+  color: var(--texto-secundario);
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-metodo:hover {
+  color: var(--color-blanco);
+  border-color: var(--color-zapote);
+}
+
+.btn-metodo.activo {
+  background: rgba(255, 107, 0, 0.15);
+  border-color: var(--color-zapote);
+  color: var(--color-blanco);
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.25);
+}
+
+.metodo-badge {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-dorado);
+}
+
+/* Lista de Pasos */
+.pasos-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tarjeta-paso-guia {
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde-color);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.3s ease;
+}
+
+.tarjeta-paso-guia:hover {
+  border-color: var(--color-zapote);
+}
+
+.paso-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.paso-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gradiente-fuego);
+  color: #000;
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.paso-tit {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-blanco);
+}
+
+.paso-desc {
+  font-size: 0.88rem;
+  color: var(--texto-secundario);
+  line-height: 1.5;
+}
+
+/* Bloque Terminal */
+.terminal-block {
+  background: #0a0c0f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+
+.terminal-code {
+  color: var(--color-dorado);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.btn-copiar {
+  background: transparent;
+  border: none;
+  color: var(--texto-secundario);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-copiar:hover {
+  color: var(--color-blanco);
+}
+
+/* Caja de alerta o nota técnica */
+.alerta-tecnica {
+  background: rgba(230, 57, 70, 0.1);
+  border: 1px solid rgba(230, 57, 70, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 0.85rem;
+  color: #fca5a5;
+  margin-bottom: 8px;
+}
+
+.alerta-tecnica strong {
+  color: #fff;
+}

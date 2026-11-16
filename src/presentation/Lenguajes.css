@@ -1,0 +1,133 @@
+.lenguajes-contenedor {
+  min-height: 100vh;
+  padding: 40px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lenguajes-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.lenguajes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .lenguajes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tarjeta-lenguaje {
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde-color);
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.tarjeta-lenguaje:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-zapote);
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.15);
+}
+
+.lenguaje-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-lenguaje {
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-lenguaje.hosting {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
+}
+
+.icono-lenguaje.app-hosting {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  color: #c084fc;
+}
+
+.lenguaje-titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-blanco);
+}
+
+.lenguaje-sub {
+  font-size: 0.8rem;
+  color: var(--texto-secundario);
+}
+
+.seccion-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seccion-tags-titulo {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-dorado);
+}
+
+.pills-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill-tech {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-blanco-soft);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.pill-tech:hover {
+  background: rgba(255, 107, 0, 0.15);
+  border-color: var(--color-zapote);
+  color: var(--color-blanco);
+}
+
+.pill-tech.destacado {
+  background: rgba(255, 193, 7, 0.15);
+  border-color: rgba(255, 193, 7, 0.3);
+  color: var(--color-dorado);
+}
+
+.lenguaje-nota {
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  border-radius: 10px;
+  border-left: 3px solid var(--color-zapote);
+}
